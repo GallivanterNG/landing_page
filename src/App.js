@@ -96,9 +96,10 @@ const App = () => {
           <div className='lg:w-1/2 mx-[16px] place-content-end flex mt-12 h-fit mb-6'><img src="./assets/images/header.png" alt="" className='' /></div>
         </div></div> */}
 
-      {otherSections.map((section, index) => (
+      <div ref={homeRef} >{otherSections.map((section, index) => (
         <OtherSection key={index} scrollFunction={() => { scrollToSection(signUpRef) }} {...section} />
-      ))}
+      ))}</div>
+
 
 
       <div ref={howItWorksRef} className={"bg-[#FDE2DE] w-full lg:flex justify-center"}>
@@ -225,7 +226,7 @@ const App = () => {
                 </div>
                 <Input
                   className="w-full h-[48px] hover:border-green-500 active:border-green-600"
-                  placeholder="What do you do?"
+                  placeholder="Where do you work?"
                   value={organization}
                   required={true}
                   onChange={(e) => setOrganization(e.target.value)}
