@@ -25,7 +25,8 @@ export const handleSubmit = async (
     userName,
     email,
     phone,
-    job
+    job,
+    organization
 ) => {
     try {
         const collectionRef = collection(db, "waitlist");
@@ -33,7 +34,7 @@ export const handleSubmit = async (
             userName,
             email,
             phone,
-            job
+            job, organization
         });
 
         return true;

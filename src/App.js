@@ -21,6 +21,7 @@ const App = () => {
   const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
   const [role, setRole] = useState("")
+  const [organization, setOrganization] = useState("")
   const [loading, setLoading] = useState(false)
   const [success, setsuccess] = useState(false)
 
@@ -41,7 +42,7 @@ const App = () => {
       const isSuccess = await handleSubmit(userName,
         email,
         phone,
-        role)
+        role, organization)
       if (isSuccess) {
         setLoading(false)
         setsuccess(true)
@@ -50,6 +51,7 @@ const App = () => {
         setName("")
         setPhone("")
         setRole("")
+        setOrganization("")
       }
     }
 
@@ -216,6 +218,17 @@ const App = () => {
                   value={role}
                   required={true}
                   onChange={(e) => setRole(e.target.value)}
+                /></div>
+              <div>
+                <div className="mb-2 mt-4">
+                  <label className="text-gray-500"> Organization </label>
+                </div>
+                <Input
+                  className="w-full h-[48px] hover:border-green-500 active:border-green-600"
+                  placeholder="What do you do?"
+                  value={organization}
+                  required={true}
+                  onChange={(e) => setOrganization(e.target.value)}
                 /></div>
             </div>
           </div>
