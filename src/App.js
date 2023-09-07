@@ -103,7 +103,7 @@ const App = () => {
         <div className='w-full lg:flex justify-between max-w-[1920px] pt-24 lg:pt-32 items-center'>
           <div className='pb-4 pd:mb-0 mx-[16px]  lg:ml-[160px] '>
             <p className='text-[rgb(247,111,89)] rounded-full '>{sections.title}</p>
-            <p className='mt-2 text-[40px] leading-[46px] lg:text-[56px]  font-extrabold text-[#381914] lg:leading-[64px]'>
+            <p className='font-cooper-std mt-2 text-[40px] leading-[46px] lg:text-[56px]  font-extrabold text-[#381914] lg:leading-[64px]'>
               {sections.subtitle}
             </p>
             <div className='lg:flex gap-4 mt-8 items-center'>
@@ -162,7 +162,7 @@ const App = () => {
 
       <div ref={signUpRef} className=' flex justify-center items-center'>
         <div className='mx-[16px] lg:mx-[160px] my-[120px]'>
-          <h2 className='font-extrabold text-[54px] leading-[46px] text-center'>Sign up to get started</h2>
+          <h2 className='font-extrabold text-[54px] leading-[56px] text-center font-cooper-std'>Sign up to get started</h2>
           {success && <Alert className='mt-6' message="Thanks for signing up, we'll come back to you shortly." type="success" />}
           {/* {success ? <div>Welcome to Gallivanter</div> : <div>Something went wrong</div>} */}
           <div className="mt-12">

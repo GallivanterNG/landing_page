@@ -6,7 +6,7 @@ const OtherSection = ({ title, subtitle, description, buttonText, imageSrc, bgCo
     <div className={`${bgColor} w-full lg:flex justify-center text-center `}>
       <div className=' pb-8 lg:pb-24 pt-40 w-full lg:flex justify-between max-w-[1920px] py-16 lg:py-32 items-center'>
         <div className=' lg:ml-[160px] mx-[16px] lg:w-2/3'>
-          <p className=' text-[40px] leading-[46px] lg:text-[80px] text-[#381914] font-extrabold lg:leading-[88px] w-5/6 lg:w-full mx-auto'>{subtitle}</p>
+          <p className=' text-[40px] leading-[46px] lg:text-[80px] text-[#381914] font-extrabold lg:leading-[88px] w-5/6 lg:w-full mx-auto font-cooper-std'>{subtitle}</p>
           {description.map((item, index) => (
             <p key={index} className='text-[#222] leading-5 text-[18px] mt-4 mb-12 w-5/6 mx-auto'>{item.description}</p>
           ))}
