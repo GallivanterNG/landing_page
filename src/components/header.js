@@ -37,7 +37,7 @@ const GalliHeader = ({ scrollToHome, scrollToWorks, scrollToFaqs, scrollToSignUp
                 }
                 }
             >How it works</h2>
-            <h2 className={`${activePage === "FAQs" ? "text-[#E36A5D] font-semibold" : "text-black font-medium"}  cursor-pointer mt-6`}
+            {/* <h2 className={`${activePage === "FAQs" ? "text-[#E36A5D] font-semibold" : "text-black font-medium"}  cursor-pointer mt-6`}
                 onClick={() => {
                     setActivePage("FAQs");
                     // scrollToSection(faqsRef);
@@ -46,10 +46,9 @@ const GalliHeader = ({ scrollToHome, scrollToWorks, scrollToFaqs, scrollToSignUp
                 }
                 }
             >
-                Testimonials</h2>
+                Testimonials</h2> */}
         </span>)
     }
-
 
     return (
         <div className='fixed z-50 bg-white w-full h-[72px] md:h-[88px] shadow-md items-center flex justify-center'>
@@ -64,7 +63,7 @@ const GalliHeader = ({ scrollToHome, scrollToWorks, scrollToFaqs, scrollToSignUp
                     >
                         {navItems()}
                     </Drawer>}
-                    <img className='h-10' src="./assets/images/logo.png" alt=''></img>
+                    <img className='h-10' src="./assets/images/icon.png" alt=''></img>
                     <span className='md:flex gap-8 hidden'>
                         <h2
                             className={`${activePage === "home" ? "text-[#E36A5D] font-semibold" : "text-black font-medium"} cursor-pointer`}
@@ -85,7 +84,7 @@ const GalliHeader = ({ scrollToHome, scrollToWorks, scrollToFaqs, scrollToSignUp
                             }
                             }
                         >How it works</h2>
-                        <h2 className={`${activePage === "FAQs" ? "text-[#E36A5D] font-semibold" : "text-black font-medium"}  cursor-pointer`}
+                        {/* <h2 className={`${activePage === "FAQs" ? "text-[#E36A5D] font-semibold" : "text-black font-medium"}  cursor-pointer`}
                             onClick={() => {
                                 setActivePage("FAQs");
                                 // scrollToSection(faqsRef);
@@ -93,7 +92,7 @@ const GalliHeader = ({ scrollToHome, scrollToWorks, scrollToFaqs, scrollToSignUp
                             }
                             }
                         >
-                            Testimonials</h2>
+                            Testimonials</h2> */}
                     </span>
                 </div>
                 <div className='bg-[#F76F59] text-white px-6 py-2 rounded-full' onClick={() => { scrollToSignUp(); }}>Sign Up</div>

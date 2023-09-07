@@ -75,7 +75,7 @@ const App = () => {
 
       />
       {/* Hero-Section */}
-      <div ref={homeRef} className='w-full lg:flex justify-center pt-24'>
+      {/* <div ref={homeRef} className='w-full lg:flex justify-center pt-24'>
         <div className=' lg:flex justify-between max-w-[1920px] '>
           <div className='mr-[16px] lg:ml-[160px] ml-[16px] mt-[64px] lg:mt-[120px] lg:w-1/2 '>
             <p className='bg-[#FDE2DE] text-[rgb(247,111,89)] border border-[#F76F59] rounded-full w-fit px-4 py-1'>Launching Soon</p>
@@ -92,12 +92,16 @@ const App = () => {
             >Get Started</div>
           </div>
           <div className='lg:w-1/2 mx-[16px] place-content-end flex mt-12 h-fit mb-6'><img src="./assets/images/header.png" alt="" className='' /></div>
-        </div></div>
+        </div></div> */}
+
+      {otherSections.map((section, index) => (
+        <OtherSection key={index} scrollFunction={() => { scrollToSection(signUpRef) }} {...section} />
+      ))}
 
 
       <div ref={howItWorksRef} className={"bg-[#FDE2DE] w-full lg:flex justify-center"}>
         <div className='w-full lg:flex justify-between max-w-[1920px] pt-24 lg:pt-32 items-center'>
-          <div className='pb-4 pd:mb-0 mx-[16px] lg:ml-[80px] lg:ml-[160px] '>
+          <div className='pb-4 pd:mb-0 mx-[16px]  lg:ml-[160px] '>
             <p className='text-[rgb(247,111,89)] rounded-full '>{sections.title}</p>
             <p className='mt-2 text-[40px] leading-[46px] lg:text-[56px]  font-extrabold text-[#381914] lg:leading-[64px]'>
               {sections.subtitle}
@@ -134,11 +138,9 @@ const App = () => {
         </div>
       </div>
 
-      {otherSections.map((section, index) => (
-        <OtherSection key={index} scrollFunction={() => { scrollToSection(signUpRef) }} {...section} />
-      ))}
 
-      <div ref={faqsRef} className='mt-32 flex flex-col justify-center w-5/6 text-center mx-auto max-w-[1920px]'>
+
+      {/* <div ref={faqsRef} className='mt-32 flex flex-col justify-center w-5/6 text-center mx-auto max-w-[1920px]'>
         <h2 className='mt-2 text-[#E36A5D] font-medium'>What People are saying?</h2>
         <h2 className='mt-2 text-[36px] font-bold text-[#381914]'>User Testimonials</h2>
         <h2 className='mt-2 w-2/3 mx-auto'>Fusce commodo metus nec massa malesuada, in congue ex sodales. Aliquam euismod, odio non dignissim lacinia,ipsum sem fermentum sapien, vel congue urna est sed libero. Proin id bibendum erat.</h2>
@@ -156,17 +158,17 @@ const App = () => {
             />
           ))}
         </div></div>
-      </div>
+      </div> */}
 
-      <div ref={signUpRef} className='flex justify-center items-center'>
+      <div ref={signUpRef} className=' flex justify-center items-center'>
         <div className='mx-[16px] lg:mx-[160px] my-[120px]'>
-          <h2 className='font-extrabold text-[40px] leading-[46px] text-center'>Sign up to get started</h2>
-          {success && <Alert className='mt-4' message="Welcome to Gallivanter" type="success" />}
+          <h2 className='font-extrabold text-[54px] leading-[46px] text-center'>Sign up to get started</h2>
+          {success && <Alert className='mt-6' message="Thanks for signing up, we'll come back to you shortly." type="success" />}
           {/* {success ? <div>Welcome to Gallivanter</div> : <div>Something went wrong</div>} */}
-          <div className="mt-4">
+          <div className="mt-12">
             <div className=' gap-8'>
               <div>
-                <div className="mb-1 mt-4">
+                <div className="mb-2 mt-4">
                   <label className="text-gray-500"> Name </label>
                 </div>
                 <Input
@@ -179,7 +181,7 @@ const App = () => {
                 />
               </div>
               <div>
-                <div className="mb-1 mt-2">
+                <div className="mb-2 mt-4">
                   <label className="text-gray-500"> Email </label>
                 </div>
                 <Input
@@ -192,7 +194,7 @@ const App = () => {
               </div>
             </div>
             <div className=' gap-8'>
-              <div><div className="mb-1 mt-2">
+              <div><div className="mb-2 mt-4">
                 <label className="text-gray-500"> Phone </label>
               </div>
                 <Input
@@ -205,7 +207,7 @@ const App = () => {
               </div>
 
               <div>
-                <div className="mb-1 mt-2">
+                <div className="mb-2 mt-4">
                   <label className="text-gray-500"> Role </label>
                 </div>
                 <Input
@@ -221,7 +223,7 @@ const App = () => {
           <div className='w-full flex justify-center mt-12'>
             <div className='bg-[#F76F59] text-white px-12 py-3 rounded-full w-fit cursor-pointer'
               onClick={handleWaitlist}>
-              {loading ? 'Loading...' : 'Get Started'}
+              {loading ? 'Loading...' : 'Sign Up'}
             </div>
           </div>
         </div>

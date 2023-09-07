@@ -1,4 +1,16 @@
 export const otherSections = [{
+    title: 'For Tour Agents / Providers',
+    subtitle: 'Grow Your Tour Business with Gallivanter',
+    description: [
+        {
+            title: 'Reach New Audiences',
+            description: 'Effortlessly list and promote your trips, manage bookings, and boost your bookings.',
+        },
+    ],
+    buttonText: 'Sign Up',
+    imageSrc: './assets/images/s-3.png',
+    bgColor: 'bg-white',
+}, {
     title: 'For Tourists',
     subtitle: 'Join fellow adventurers on unique trips across Nigeria',
     description: [
@@ -6,12 +18,12 @@ export const otherSections = [{
             title: 'Find and book exciting trips',
             description: 'Connect with like-minded travelers, and create unforgettable memories.',
         },
-        
+
     ],
-    buttonText: 'Explore the Wonders of Nigeria',
+    buttonText: 'Sign Up',
     imageSrc: './assets/images/s-1.png',
 
-    bgColor: 'bg-white',
+    bgColor: 'bg-[#FEF1EE]',
 },
 {
     title: 'For Guides (Local Experts)',
@@ -23,20 +35,7 @@ export const otherSections = [{
             description: 'Monetize your knowledge, connect with travelers, and be part of their unforgettable journeys.',
         },
     ],
-    buttonText: 'Sign Up as a Guide',
+    buttonText: 'Sign Up',
     imageSrc: './assets/images/s-2.png',
-    bgColor: 'bg-[#FEF1EE]',
-},
-{
-    title: 'For Tour Agents / Providers',
-    subtitle: 'Grow Your Tour Business with Gallivanter',
-    description: [
-        {
-            title: 'Reach New Audiences',
-            description: 'Effortlessly list and promote your trips, manage bookings, and boost your bookings.',
-        },
-    ],
-    buttonText: 'Reach New Audiences',
-    imageSrc: './assets/images/s-3.png',
     bgColor: 'bg-white',
 },]
